@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Club Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Club Registration</h1>
+        <form id="registrationForm" method="POST" action="submit.php">
+            <!-- Personal Information -->
+            <h2>Personal Information</h2>
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="text" name="student_id" placeholder="Student ID" required>
+            <input type="date" name="dob" required>
+            <select name="gender" required>
+                <option value="" disabled selected>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="tel" name="contact_number" placeholder="Contact Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <!-- Academic Information -->
+            <h2>Academic Information</h2>
+            <input type="text" name="course" placeholder="Course/Program" required>
+            <input type="text" name="year_of_study" placeholder="Year of Study (e.g., Freshman)" required>
+            <input type="text" name="department" placeholder="Department/Faculty" required>
+
+            <!-- Club-Specific Details -->
+            <h2>Club-Specific Details</h2>
+            <select id="club" name="club" required>
+                <option value="" disabled selected>Select Club</option>
+                <option value="Literary">📚 Literary Club</option>
+                <option value="Sports">⚽ Sports Club</option>
+                <option value="Music">🎵 Music Club</option>
+                <option value="Drama">🎭 Drama Club</option>
+                <option value="Tech">💻 Tech Club</option>
+            </select>
+            <select name="role" required>
+                <option value="" disabled selected>Preferred Role in Club</option>
+                <option value="Member">Member</option>
+                <option value="Organizer">Organizer</option>
+                <option value="Volunteer">Volunteer</option>
+            </select>
+            <input type="text" name="skills" placeholder="Skills/Interests">
+            <textarea name="reason" placeholder="Reason for Joining (Optional)"></textarea>
+
+            <!-- Emergency Contact -->
+            <h2>Emergency Contact</h2>
+            <input type="text" name="emergency_name" placeholder="Emergency Contact Name" required>
+            <input type="text" name="relationship" placeholder="Relationship" required>
+            <input type="tel" name="emergency_contact" placeholder="Emergency Contact Number" required>
+
+            <!-- Consent -->
+            <div class="consent">
+                <input type="checkbox" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            <div class="consent">
+                <input type="checkbox" name="photo_consent">
+                <label for="photo_consent">I allow use of my photos/videos for promotions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
